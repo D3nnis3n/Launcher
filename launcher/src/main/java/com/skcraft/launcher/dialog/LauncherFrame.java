@@ -355,7 +355,7 @@ public class LauncherFrame extends JFrame {
         LaunchOptions options = new LaunchOptions.Builder()
                 .setInstance(instance)
                 .setListener(new LaunchListenerImpl(this))
-                .setUpdatePolicy(permitUpdate ? UpdatePolicy.UPDATE_IF_SESSION_ONLINE : UpdatePolicy.NO_UPDATE)
+                .setUpdatePolicy(permitUpdate ? UpdatePolicy.ALWAYS_UPDATE : UpdatePolicy.NO_UPDATE)
                 .setWindow(this)
                 .build();
         launcher.getLaunchSupervisor().launch(options);
